@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>model</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cjgseg%5Cdocuments%5Cgis_msc%5Cgeog5990%5Cabm%5Cmodel.py">c:\users\jgseg\documents\gis_msc\geog5990\abm\model.py</a></font></td></tr></table>
+    <p><tt>Agent-Based&nbsp;Modelling<br>
+&nbsp;<br>
+This&nbsp;agent-based&nbsp;model:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;builds&nbsp;agents&nbsp;in&nbsp;a&nbsp;space;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;gets&nbsp;the&nbsp;agents&nbsp;to&nbsp;interact&nbsp;with&nbsp;each&nbsp;other;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;reads&nbsp;in&nbsp;environmental&nbsp;data;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;gets&nbsp;agents&nbsp;to&nbsp;interact&nbsp;with&nbsp;the&nbsp;environment;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;randomizes&nbsp;the&nbsp;order&nbsp;of&nbsp;agent&nbsp;actions;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;displays&nbsp;the&nbsp;model&nbsp;as&nbsp;an&nbsp;animation;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;is&nbsp;contained&nbsp;within&nbsp;a&nbsp;GUI;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;is&nbsp;initialised&nbsp;with&nbsp;data&nbsp;from&nbsp;the&nbsp;web.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="agentframework.html">agentframework</a><br>
+<a href="bs4.html">bs4</a><br>
+</td><td width="25%" valign=top><a href="csv.html">csv</a><br>
+<a href="matplotlib.html">matplotlib</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+<a href="requests.html">requests</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+<a href="tkinter.html">tkinter</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-exiting"><strong>exiting</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;stops&nbsp;the&nbsp;console&nbsp;from&nbsp;running&nbsp;the&nbsp;code.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-gen_function"><strong>gen_function</strong></a>(b=[0])</dt><dd><tt>This&nbsp;function&nbsp;returns&nbsp;an&nbsp;object&nbsp;(iterator)&nbsp;which&nbsp;we&nbsp;can&nbsp;iterate&nbsp;over&nbsp;<br>
+(one&nbsp;value&nbsp;at&nbsp;a&nbsp;time).</tt></dd></dl>
+ <dl><dt><a name="-print_agents"><strong>print_agents</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;prints&nbsp;out&nbsp;all&nbsp;of&nbsp;the&nbsp;agents&nbsp;to&nbsp;check&nbsp;the&nbsp;code&nbsp;is&nbsp;working.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-run"><strong>run</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;runs&nbsp;the&nbsp;model&nbsp;animation.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-update"><strong>update</strong></a>(frame_number)</dt><dd><tt>This&nbsp;function:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;runs&nbsp;the&nbsp;code&nbsp;to&nbsp;make&nbsp;the&nbsp;agents&nbsp;interact&nbsp;with&nbsp;each&nbsp;other&nbsp;and&nbsp;their&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;environment;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;cretaes&nbsp;a&nbsp;stopping&nbsp;condition&nbsp;to&nbsp;stop&nbsp;the&nbsp;model&nbsp;when&nbsp;a&nbsp;condition&nbsp;is&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;met,&nbsp;in&nbsp;this&nbsp;instance&nbsp;the&nbsp;stopping&nbsp;condition&nbsp;is&nbsp;the&nbsp;agent's&nbsp;store;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;plots&nbsp;the&nbsp;data&nbsp;in&nbsp;a&nbsp;graph.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>agents</strong> = [&lt;agentframework.Agent object&gt;, &lt;agentframework.Agent object&gt;, &lt;agentframework.Agent object&gt;, &lt;agentframework.Agent object&gt;, &lt;agentframework.Agent object&gt;, &lt;agentframework.Agent object&gt;, &lt;agentframework.Agent object&gt;, &lt;agentframework.Agent object&gt;, &lt;agentframework.Agent object&gt;, &lt;agentframework.Agent object&gt;]<br>
+<strong>animation</strong> = &lt;matplotlib.animation.FuncAnimation object&gt;<br>
+<strong>ax</strong> = &lt;matplotlib.axes._axes.Axes object&gt;<br>
+<strong>canvas</strong> = &lt;matplotlib.backends.backend_tkagg.FigureCanvasTkAgg object&gt;<br>
+<strong>carry_on</strong> = False<br>
+<strong>content</strong> = "&lt;HTML&gt;<font color="#c040c0">\r\n</font>&lt;BODY&gt;<font color="#c040c0">\r\n</font>&lt;STYLE&gt;<font color="#c040c0">\r\n</font>TD {border: 1px solid b...ass='z'&gt;117&lt;/TD&gt;&lt;/TR&gt;<font color="#c040c0">\r\n</font>&lt;/TABLE&gt;<font color="#c040c0">\r\n</font>&lt;/BODY&gt;<font color="#c040c0">\r\n</font>&lt;/HTML&gt;"<br>
+<strong>environment</strong> = [[220.0, 221.0, 222.0, 223.0, 226.0, 230.0, 234.0, 228.0, 241.0, 231.0, 242.0, 223.0, 243.0, 203.0, 244.0, 244.0, 245.0, 247.0, 249.0, 250.0, ...], [221.0, 222.0, 223.0, 224.0, 227.0, 231.0, 234.0, 238.0, 231.0, 241.0, 232.0, 243.0, 203.0, 243.0, 204.0, 244.0, 235.0, 247.0, 248.0, 249.0, ...], [222.0, 223.0, 223.0, 224.0, 228.0, 232.0, 235.0, 239.0, 241.0, 232.0, 242.0, 223.0, 243.0, 213.0, 244.0, 214.0, 245.0, 246.0, 247.0, 248.0, ...], [223.0, 224.0, 224.0, 225.0, 228.0, 232.0, 235.0, 239.0, 242.0, 242.0, 243.0, 243.0, 233.0, 243.0, 233.0, 244.0, 245.0, 246.0, 246.0, 247.0, ...], [226.0, 227.0, 228.0, 228.0, 231.0, 234.0, 237.0, 240.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 245.0, 245.0, ...], [230.0, 231.0, 232.0, 232.0, 235.0, 237.0, 238.0, 240.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 244.0, 243.0, 243.0, ...], [233.0, 234.0, 235.0, 236.0, 238.0, 239.0, 239.0, 241.0, 242.0, 242.0, 243.0, 243.0, 243.0, 242.0, 243.0, 243.0, 244.0, 243.0, 243.0, 242.0, ...], [237.0, 238.0, 239.0, 240.0, 241.0, 241.0, 241.0, 241.0, 242.0, 242.0, 243.0, 243.0, 242.0, 242.0, 242.0, 243.0, 243.0, 242.0, 241.0, 241.0, ...], [241.0, 242.0, 242.0, 243.0, 243.0, 243.0, 242.0, 242.0, 242.0, 243.0, 243.0, 243.0, 243.0, 242.0, 242.0, 242.0, 242.0, 241.0, 240.0, 240.0, ...], [242.0, 243.0, 243.0, 244.0, 244.0, 243.0, 243.0, 242.0, 243.0, 243.0, 244.0, 243.0, 243.0, 242.0, 242.0, 242.0, 241.0, 240.0, 239.0, 239.0, ...], [244.0, 244.0, 244.0, 244.0, 244.0, 244.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 243.0, 242.0, 241.0, 241.0, 240.0, 239.0, 238.0, 238.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 244.0, 243.0, 241.0, 240.0, 240.0, 240.0, 238.0, 238.0, 237.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 244.0, 242.0, 240.0, 240.0, 240.0, 240.0, 239.0, 238.0, 237.0, ...], [245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 245.0, 243.0, 242.0, 240.0, 240.0, 240.0, 240.0, 238.0, 237.0, 235.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 245.0, 245.0, 245.0, 244.0, 243.0, 242.0, 240.0, 240.0, 240.0, 239.0, 237.0, 235.0, 233.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 241.0, 240.0, 240.0, 238.0, 235.0, 233.0, 231.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 242.0, 241.0, 240.0, 237.0, 234.0, 232.0, 230.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 242.0, 240.0, 239.0, 236.0, 233.0, 231.0, 229.0, ...], [245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 241.0, 240.0, 239.0, 236.0, 233.0, 232.0, 230.0, ...], [244.0, 244.0, 244.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 244.0, 243.0, 243.0, 242.0, 241.0, 239.0, 238.0, 236.0, 233.0, 232.0, 230.0, ...], ...]<br>
+<strong>f</strong> = &lt;_io.TextIOWrapper name='in.txt' mode='r' encoding='cp1252'&gt;<br>
+<strong>fig</strong> = &lt;Figure size 700x700 with 1 Axes&gt;<br>
+<strong>i</strong> = 9<br>
+<strong>menu_bar</strong> = &lt;tkinter.Menu object .!menu&gt;<br>
+<strong>model_menu</strong> = &lt;tkinter.Menu object .!menu.!menu&gt;<br>
+<strong>neighbourhood</strong> = 20<br>
+<strong>num_of_agents</strong> = 10<br>
+<strong>num_of_iterations</strong> = 100<br>
+<strong>num_of_steps</strong> = 10<br>
+<strong>r</strong> = &lt;Response [200]&gt;<br>
+<strong>reader</strong> = &lt;_csv.reader object&gt;<br>
+<strong>root</strong> = &lt;tkinter.Tk object .&gt;<br>
+<strong>row</strong> = [238.0, 237.0, 235.0, 233.0, 230.0, 228.0, 227.0, 226.0, 225.0, 224.0, 223.0, 223.0, 223.0, 223.0, 222.0, 222.0, 223.0, 223.0, 223.0, 223.0, ...]<br>
+<strong>rowlist</strong> = [238.0, 237.0, 235.0, 233.0, 230.0, 228.0, 227.0, 226.0, 225.0, 224.0, 223.0, 223.0, 223.0, 223.0, 222.0, 222.0, 223.0, 223.0, 223.0, 223.0, ...]<br>
+<strong>seed</strong> = 1<br>
+<strong>soup</strong> = &lt;html&gt;
+&lt;body&gt;
+&lt;style&gt;
+TD {border: 1px solid bla... class="z"&gt;117&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;<br>
+<strong>start</strong> = 0.5<br>
+<strong>td_xs</strong> = [&lt;td class="x"&gt;20&lt;/td&gt;, &lt;td class="x"&gt;52&lt;/td&gt;, &lt;...d&gt;, &lt;td class="x"&gt;38&lt;/td&gt;, &lt;td class="x"&gt;93&lt;/td&gt;]<br>
+<strong>td_ys</strong> = [&lt;td class="y"&gt;73&lt;/td&gt;, &lt;td class="y"&gt;91&lt;/td&gt;, &lt;...d&gt;, &lt;td class="y"&gt;70&lt;/td&gt;, &lt;td class="y"&gt;38&lt;/td&gt;]<br>
+<strong>values</strong> = 120.0</td></tr></table>
+</body></html>
