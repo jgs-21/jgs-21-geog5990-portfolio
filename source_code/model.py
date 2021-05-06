@@ -30,7 +30,8 @@ import argparse
 
 # Set the model parameters at the command line:
 # Set the model up to read the parameters from the command line
-# (https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1)
+# The following code to set parameters at the command line is altered from that at
+# https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1
 parser = argparse.ArgumentParser(description='Agent-Based Modelling')
 parser.add_argument("num_of_agents", default = 10, type=int, 
                     help="This is an integer to set the number of agents")
