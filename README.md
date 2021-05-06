@@ -13,6 +13,7 @@ The source code in this repository creates an agent-based model which:
 - is initialised with data from the web.
 
 CONTENTS:
+
 This repository contains:
 - model.py (found in the source_code directory) - this file is the main model containing the code for the agent-based model.
 - agentframework.py (found in the source_code directory) - this file is a module containing the agents attributes and behaviours which is imported into the main model.py.
@@ -25,10 +26,10 @@ HOW TO RUN:
 - The model.py can also be run in spyder whereby the command line options need to be set in the configuration per file prior to running (run --> configuration per file
 --> set command line options) (alternatively, Ctrl+F6 --> set command line options)
 - The four arguments to be set at the command line are:
-    ~ num_of_agents (this is an integer value to set the number of agents)
-    ~ num_of_steps (this is an integer value to set the number of steps for the model)
-    ~ num_of_iterations (this is an integer value to set the number of iterations for the model)
-    ~ neighbourhood (this is an integer value to set the neighbourhood for the model)
+    - num_of_agents (this is an integer value to set the number of agents)
+    - num_of_steps (this is an integer value to set the number of steps for the model)
+    - num_of_iterations (this is an integer value to set the number of iterations for the model)
+    - neighbourhood (this is an integer value to set the neighbourhood for the model)
     
 - Note: the parameter variables have been left in the code commented out if one wants to set the values in the script instead of at the command line
 
