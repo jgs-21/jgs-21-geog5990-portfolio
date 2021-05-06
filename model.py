@@ -26,6 +26,28 @@ import csv
 import requests
 import bs4
 import time
+import argparse
+
+# Set the model parameters at the command line:
+# Set the model up to read the parameters from the command line
+# (https://levelup.gitconnected.com/the-easy-guide-to-python-command-line-arguments-96b4607baea1)
+parser = argparse.ArgumentParser(description='Agent-Based Modelling')
+parser.add_argument("num_of_agents", default = 10, type=int, 
+                    help="This is an integer to set the number of agents")
+parser.add_argument("num_of_steps", default = 10, type=int, 
+                    help="This is an integer to set the number of steps for the model")
+parser.add_argument("num_of_iterations", default = 100, type=int, 
+                    help="This is an integer to set the number of iterations for the model")
+parser.add_argument("neighbourhood", default = 20, type=int, 
+                    help="This is an integer to set the neighbourhood for the model")
+
+args = parser.parse_args()
+num_of_agents = args.num_of_agents
+num_of_steps = args.num_of_steps
+num_of_iterations = args.num_of_iterations
+neighbourhood = args.neighbourhood
+print(num_of_agents, num_of_steps, num_of_iterations, neighbourhood)
+
 
 # Time how long the code takes to run
 start = time.process_time()
@@ -34,19 +56,18 @@ start = time.process_time()
 # Set the model parameters:
     
 # Number of agents
-num_of_agents = 10
+#num_of_agents = 10
 # Number of steps
-num_of_steps = 10
+#num_of_steps = 10
 # Number of iterations
-num_of_iterations = 100
+#num_of_iterations = 100
 # Neighbourhood
-neighbourhood = 20
+#neighbourhood = 20
 
 # The seed method initialises the random number generator so that the same 
 # random numbers are produced.
 seed = 1
 random.seed(seed)
-
 
 
 # Initialise with data from the web (web scraping):
@@ -113,7 +134,6 @@ menu_bar.add_cascade(label="Model", menu=model_menu)
 model_menu.add_command(label="Run model", command=run) 
 
 
-
 # Read in the environmental data:
 
 # Load in the data for the environment from the text file which contains 
@@ -144,6 +164,7 @@ for row in reader:
 f.close()
 
 
+# Check the agents
 def print_agents():
     """
     This function prints out all of the agents to check the code is working.
@@ -172,7 +193,9 @@ for i in range(num_of_agents):
 print("Before moving, eating, and sharing with neighbourhood:")
 print_agents()
 
+
 carry_on = True
+
 
 def update(frame_number):
     """
@@ -210,27 +233,35 @@ def update(frame_number):
             #print("Step: ", j, " ", agents[i], sep='', end='\n', flush=False, 
             #      file=open("store.txt", "a"))
     
+    
     # Create stopping condition for the model - the model will stop running 
     # when the condition is met
     
-    # Stop when all agent stores are greater than limit
+    # Stop when all agent stores are greater than the limit
     limit = 1000
     count = 0
+    # For each agent, if their store is greater than the limit, the count 
+    # will increase by one
     for i in range(num_of_agents):
         if agents[i].store > limit:
             count = count + 1
+    # If the count reaches the same number as the number of agents, meaning all
+    # agents stores have exceeded the limit, the model will stop
     if (count == num_of_agents):
         carry_on = False
         print("Stopping Condition")
-        
+    
+    
     # Check the agents after they have interacted with their environment
     print("After moving, eating, and sharing with neighbourhood:")
     print_agents()  
+    
     
     # Time how long the code takes to run
     end = time.process_time()
     print("Time taken = " + str(end - start))
 
+   
     # Plot data in a graph
     matplotlib.pyplot.ylim(0, 100)
     matplotlib.pyplot.xlim(0, 100)
@@ -254,10 +285,12 @@ def gen_function(b = [0]):
         a = a + 1
 
 
+# Calculate distance
 #for agents_row_a in agents:
     #for agents_row_b in agents:
         #distance = agents_row_a.distance_between(agents_row_b)
         #print(distance)
+
 
 # Function to stop the console from continuously running the code
 def exiting():
