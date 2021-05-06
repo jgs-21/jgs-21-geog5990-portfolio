@@ -1,4 +1,4 @@
-# jgs-21-geog5990-portfolio
+# jgs-21-portfolio
 This repository is a portfolio for the python code I have created during the University of Leeds' Programming for Geographical Information Analysis module as part of my GIS MSc.
 
 The source code in this repository creates an agent-based model which:
