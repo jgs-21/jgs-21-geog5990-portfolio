@@ -42,7 +42,8 @@ class Agent():
             self._x = _x
         
         # Protect the self.x and self.y variables by implementing a property 
-        # attribute with set and get methods
+        # attribute with set and get methods 
+        # (https://docs.python.org/3/library/functions.html#property)
         
         @property
         def y(self):
