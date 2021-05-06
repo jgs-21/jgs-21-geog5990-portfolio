@@ -54,7 +54,6 @@ start = time.process_time()
 
 
 # Set the model parameters:
-    
 # Number of agents
 #num_of_agents = 10
 # Number of steps
