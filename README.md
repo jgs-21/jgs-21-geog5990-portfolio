@@ -39,6 +39,7 @@ What to expect when the programme is run:
 
 Testing:
 - Print statements have been used throughout the code to ensure the code is performing in the intended way.
+- The code has also been timed.
 
 
 Further development:
