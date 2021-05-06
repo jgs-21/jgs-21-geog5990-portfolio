@@ -30,7 +30,7 @@ The source code in this repository creates an agent-based model which:
     
 - Note: the parameter variables have been left in the code commented out if one wants to set the values in the script instead of at the command line.
 
-## Additional Information:
+## :books: Additional Information:
 What to expect when the programme is run:
 - After the parameters have been set at the command line, a pop-up window containing a GUI will appear. 'Model' should be selected from the menu bar, then 
 'run model' should then be selected from the drop-down menu to run the code to produce the model.
